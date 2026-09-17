@@ -260,7 +260,14 @@ a {
   box-shadow: 0 0 20px rgba(86, 158, 215, 0.35);
 }
 
-.nav__name { font-size: 15px; }
+/* «Gabriel Navarro Bazay» no cabe junto al selector de idioma y el botón de
+   menú en pantallas estrechas: bajo 600px queda solo el monograma, y el
+   nombre completo lo sostiene el <h1>, justo debajo. */
+.nav__name {
+  display: none;
+  font-size: 15px;
+  white-space: nowrap;
+}
 
 .nav__links { display: none; }
 
@@ -846,6 +853,7 @@ a {
 
 @media (min-width: 600px) {
   :root { --pad: var(--space-4); }
+  .nav__name { display: block; }
   .grid--edu { grid-template-columns: repeat(2, 1fr); }
   .grid--int { grid-template-columns: repeat(2, 1fr); }
   .stats { gap: var(--space-3); }
