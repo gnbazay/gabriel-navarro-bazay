@@ -43,7 +43,7 @@
 
       "stack.label": "Stack técnico",
       "stack.title": "Las herramientas del oficio",
-      "stack.intro": "Backend, frontend, infraestructura y observabilidad: el conjunto con el que diseño y sostengo plataformas en producción.",
+      "stack.intro": "Backend, frontend, infraestructura, observabilidad y las herramientas de IA que uso a diario: el conjunto con el que diseño y sostengo plataformas en producción.",
 
       "exp.label": "Trayectoria",
       "exp.title": "Experiencia profesional",
@@ -130,7 +130,7 @@
 
       "stack.label": "Tech stack",
       "stack.title": "The tools of the trade",
-      "stack.intro": "Backend, frontend, infrastructure and observability: the toolset I use to design and keep platforms running in production.",
+      "stack.intro": "Backend, frontend, infrastructure, observability and the AI tools I use every day: the toolset with which I design and keep platforms running in production.",
 
       "exp.label": "Career",
       "exp.title": "Professional experience",
@@ -217,7 +217,7 @@
 
       "stack.label": "Stack technique",
       "stack.title": "Les outils du métier",
-      "stack.intro": "Backend, frontend, infrastructure et observabilité : l'ensemble avec lequel je conçois et maintiens des plateformes en production.",
+      "stack.intro": "Backend, frontend, infrastructure, observabilité et les outils d'IA que j'utilise au quotidien : l'ensemble avec lequel je conçois et maintiens des plateformes en production.",
 
       "exp.label": "Parcours",
       "exp.title": "Expérience professionnelle",
