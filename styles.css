@@ -732,6 +732,32 @@ a {
 
 .card__text { color: var(--text-2); font-size: 15px; }
 
+/* Logros de cada puesto: lista discreta, con un guion luminoso como marcador
+   para no competir con los nodos de la timeline. */
+.card__points {
+  display: grid;
+  gap: 8px;
+  margin-top: var(--space-2);
+}
+
+.card__points li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.card__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 9px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--blue-electric), transparent);
+}
+
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--space-2); }
 
 .chip {
@@ -746,9 +772,6 @@ a {
 
 .card--job .card__company:last-child,
 .card--edu .card__company { margin-bottom: 0; }
-
-.timeline__item--compact .card { padding-block: var(--space-2); }
-.timeline__item--compact .card__title { font-size: 16px; }
 
 .grid { display: grid; gap: var(--space-2); }
 .grid--edu { grid-template-columns: 1fr; }

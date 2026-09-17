@@ -11,6 +11,23 @@ Sitio estático **sin frameworks, sin dependencias y sin build**: un archivo por
 (`index.html`, `styles.css`, `script.js`). Esa restricción es deliberada y viene del brief —
 no introduzcas npm, bundlers, preprocesadores ni librerías de terceros sin que el usuario lo pida.
 
+## Flujo de trabajo: rama por cambio
+
+**Nunca trabajes directamente sobre `main`.** Cada cambio arranca con una rama creada a partir
+de `main`, se commitea allí y **solo se fusiona cuando el usuario ha visto el resultado y lo
+aprueba**. El motivo es que `main` está conectado a GitHub Pages: cualquier push a esa rama
+publica la web personal al instante, sin margen de revisión.
+
+```bash
+git checkout main && git pull
+git checkout -b <nombre-del-cambio>
+# … editar, commitear, y ofrecerle una vista previa (servidor local o la rama en GitHub)
+# … esperar su visto bueno; solo entonces:
+git checkout main && git merge --no-ff <nombre-del-cambio> && git push origin main
+```
+
+No interpretes el silencio como aprobación: mientras no lo diga, el trabajo se queda en la rama.
+
 ## Comandos
 
 No hay build, lint ni tests. El único comando de desarrollo es servir la carpeta:
@@ -70,13 +87,35 @@ El sitio es trilingüe (es/en/fr) y es la parte con más acoplamiento entre arch
   Al cambiar de idioma, `syncUrl()` reescribe la URL con `replaceState` y **autorreferencia el
   `<link rel="canonical">`**, para que Google trate cada variante como página distinta.
 
-Para comprobar que HTML y diccionarios siguen sincronizados (61 claves a día de hoy):
+Para comprobar que HTML y diccionarios siguen sincronizados (72 claves a día de hoy):
 
 ```bash
 node -e 'const h=require("fs").readFileSync("index.html","utf8");
 const k=new Set([...h.matchAll(/data-i18n="([^"]+)"/g)].map(m=>m[1]));
 console.log(k.size+" claves en el HTML")'
 ```
+
+### Contenido de la experiencia
+
+Cada puesto de la timeline es una tarjeta con la misma anatomía: periodo, cargo, empresa y
+ciudad, un párrafo de contexto, una lista `.card__points` con dos o tres logros y los `.chips`
+con la tecnología. El periodo, la empresa y los chips son estáticos (no se traducen); el cargo,
+el párrafo y los logros llevan `data-i18n`, así que **añadir un logro son cuatro ediciones**: el
+`<li>` en el HTML y la clave en los tres diccionarios.
+
+El material de origen es `assets/Profile.pdf`, el export del LinkedIn del usuario, mucho más
+detallado que el brief inicial. Está en `.gitignore` porque es material de trabajo y porque
+incluye su teléfono en texto plano, justo lo que la web evita exponer. Para leerlo en macOS sin
+instalar nada:
+
+```bash
+osascript -l JavaScript -e 'ObjC.import("Quartz");
+const d = $.PDFDocument.alloc.initWithURL($.NSURL.fileURLWithPath("<ruta>/assets/Profile.pdf"));
+ObjC.unwrap(d.string);'
+```
+
+El nivel de detalle es una decisión suya: quiere que se note el contenido de cada puesto, pero
+sin volcar el LinkedIn entero. Dos o tres logros por puesto es el techo acordado.
 
 ### Sistema de diseño
 
@@ -142,8 +181,9 @@ es la fuente de verdad para cualquier duda de diseño o contenido).
 ## Despliegue
 
 GitHub Pages sirve `main` desde la raíz: **cada push a `main` republica el sitio**, no hay
-workflow de Actions. `.nojekyll` evita el procesado de Jekyll.
+workflow de Actions. Por eso existe la regla de la rama por cambio que abre este documento.
+`.nojekyll` evita el procesado de Jekyll.
 
 `.gitignore` excluye el material de trabajo que no forma parte del sitio: `idea inicial.txt`,
-`assets/foto.png` (el original de 4,7 MB) y `assets/cv Gabriel NAVARRO.pdf` (la copia publicada
-es `assets/cv-gabriel-navarro.pdf`, sin espacios en el nombre).
+`assets/foto.png` (el original de 4,7 MB), `assets/cv Gabriel NAVARRO.pdf` (la copia publicada
+es `assets/cv-gabriel-navarro.pdf`, sin espacios en el nombre) y `assets/Profile.pdf`.
