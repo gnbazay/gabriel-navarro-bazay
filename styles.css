@@ -375,6 +375,18 @@ a {
   margin-bottom: var(--space-2);
 }
 .eyebrow--split { justify-content: flex-start; gap: var(--space-2); color: var(--text-muted); }
+/* La ubicación sí es información, no decoración: contraste de texto real. */
+.eyebrow__place { color: var(--text-2); }
+.eyebrow__place::before {
+  content: "";
+  display: inline-block;
+  width: 4px; height: 4px;
+  margin-right: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background: var(--blue-electric);
+  box-shadow: 0 0 8px rgba(99, 200, 255, 0.8);
+}
 .eyebrow__num {
   color: var(--blue-electric);
   font-family: var(--font-display);
@@ -835,6 +847,11 @@ a {
   transform: translateY(-3px);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4), 0 0 24px rgba(99, 200, 255, 0.12);
 }
+
+/* La ubicación no lleva a ningún sitio: se ve como las demás, pero no invita
+   a pulsar ni reacciona al hover. */
+.contact__item--static { cursor: default; margin: 0; }
+.contact__item--static:hover { border-color: var(--border); transform: none; box-shadow: none; }
 .contact__item .icon { color: var(--blue-electric); }
 
 .contact__meta { display: flex; flex-direction: column; min-width: 0; }
@@ -917,7 +934,7 @@ a {
   .timeline::before { left: 3px; }
 
   .contact { padding: var(--space-6); }
-  .contact__list { grid-template-columns: repeat(3, 1fr); }
+  .contact__list { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 
   .footer__inner {
     grid-template-columns: auto 1fr auto;

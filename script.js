@@ -75,7 +75,8 @@
       "edu.label": "Formación",
       "edu.title": "Formación y certificaciones",
       "edu.cert": "Certificación",
-      "edu.degree": "Ingeniería en Informática de Gestión",
+      "edu.degree": "Ingeniero Técnico en Informática de Gestión",
+      "edu.vocational": "Desarrollo de Aplicaciones Informáticas",
 
       "int.label": "Fuera del trabajo",
       "int.title": "Intereses",
@@ -91,6 +92,7 @@
       "contact.email": "Email",
       "contact.phone": "Teléfono",
       "contact.phoneShow": "Mostrar número",
+      "contact.location": "Ubicación",
 
       "footer.built": "Hecho con HTML, CSS y JavaScript"
     },
@@ -160,7 +162,8 @@
       "edu.label": "Education",
       "edu.title": "Education & certifications",
       "edu.cert": "Certification",
-      "edu.degree": "Engineering in Management Information Systems",
+      "edu.degree": "Technical Engineer in Management Information Systems",
+      "edu.vocational": "Computer Applications Development",
 
       "int.label": "Beyond work",
       "int.title": "Interests",
@@ -176,6 +179,7 @@
       "contact.email": "Email",
       "contact.phone": "Phone",
       "contact.phoneShow": "Show number",
+      "contact.location": "Location",
 
       "footer.built": "Built with HTML, CSS and JavaScript"
     },
@@ -245,7 +249,8 @@
       "edu.label": "Formation",
       "edu.title": "Formation et certifications",
       "edu.cert": "Certification",
-      "edu.degree": "Ingénierie en Informatique de Gestion",
+      "edu.degree": "Ingénieur Technique en Informatique de Gestion",
+      "edu.vocational": "Développement d'Applications Informatiques",
 
       "int.label": "Hors du travail",
       "int.title": "Centres d'intérêt",
@@ -261,6 +266,7 @@
       "contact.email": "E-mail",
       "contact.phone": "Téléphone",
       "contact.phoneShow": "Afficher le numéro",
+      "contact.location": "Localisation",
 
       "footer.built": "Réalisé en HTML, CSS et JavaScript"
     }
