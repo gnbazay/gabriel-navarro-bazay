@@ -1,14 +1,17 @@
-# Gabriel Navarro — CV / Portfolio
+# Gabriel Navarro Bazay — CV / Portfolio
 
-Landing page personal de **Gabriel Navarro**, Leader Técnico y Solution Manager.
+Landing page personal de **Gabriel Navarro Bazay**, Leader Técnico y Solution Manager.
 Sitio estático, sin frameworks ni dependencias de build: HTML, CSS y JavaScript vainilla.
 
-🔗 **https://gnbazay.github.io/gabriel-navarro-cv/**
+🔗 **https://gnbazay.github.io/gabriel-navarro-bazay/**
 
 ## Características
 
-- **Trilingüe** (español, inglés y francés). El idioma inicial se detecta del navegador y la
-  elección manual se guarda en `localStorage`.
+- **Trilingüe** (español, inglés y francés). El idioma inicial sale de `?lang=`, de la elección
+  guardada en `localStorage` o del navegador, por ese orden. Cada idioma tiene URL propia y
+  compartible: la raíz en español, `?lang=en` y `?lang=fr` para el resto.
+- **Optimizado para búsquedas del nombre**: JSON-LD `Person` y `WebSite`, canonical
+  autorreferenciado, `hreflang`, Open Graph, `sitemap.xml` y `robots.txt`.
 - **Responsive mobile-first**, sin desbordamiento horizontal en ningún ancho.
 - **Accesible**: navegación por teclado, skip link, landmarks semánticos, foco visible y
   soporte de `prefers-reduced-motion`.

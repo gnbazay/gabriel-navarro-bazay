@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Gabriel Navarro — CV landing
+   Gabriel Navarro Bazay — CV landing
    Cyberpunk cinematográfico: noir futurista, atmosférico, premium.
    Mobile-first. Tokens → base → átomos → secciones → responsive.
    ========================================================================== */
@@ -470,7 +470,9 @@ a {
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 0.92;
-  margin-bottom: var(--space-3);
+  /* Con line-height 0.92 el descendente de la «y» de Bazay rebasa la caja de
+     línea: hace falta algo más de aire antes del rol. */
+  margin-bottom: var(--space-4);
 }
 .hero__title-line { display: block; }
 .hero__title-line--accent {

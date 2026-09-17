@@ -4,8 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Qué es esto
 
-Landing page personal / CV de Gabriel Navarro (Leader Técnico y Solution Manager), publicada en
-GitHub Pages: https://gnbazay.github.io/gabriel-navarro-cv/
+Landing page personal / CV de Gabriel Navarro Bazay (Leader Técnico y Solution Manager), publicada en
+GitHub Pages: https://gnbazay.github.io/gabriel-navarro-bazay/
 
 Sitio estático **sin frameworks, sin dependencias y sin build**: un archivo por tipo
 (`index.html`, `styles.css`, `script.js`). Esa restricción es deliberada y viene del brief —
@@ -64,7 +64,11 @@ El sitio es trilingüe (es/en/fr) y es la parte con más acoplamiento entre arch
   en el idioma anterior, sin error visible.
 - `applyTo()` distingue por etiqueta: en `<meta>` escribe el atributo `content`, en el resto
   `textContent`. Por eso el `<title>` y las metadescripciones también se traducen.
-- Idioma inicial: `localStorage['gn-lang']` → `navigator.languages` → inglés (`FALLBACK`).
+- Idioma inicial, por orden: parámetro `?lang=` de la URL → `localStorage['gn-lang']` →
+  `navigator.languages` → inglés (`FALLBACK`).
+- Cada idioma tiene URL propia: el español vive en la raíz y los otros en `?lang=en` / `?lang=fr`.
+  Al cambiar de idioma, `syncUrl()` reescribe la URL con `replaceState` y **autorreferencia el
+  `<link rel="canonical">`**, para que Google trate cada variante como página distinta.
 
 Para comprobar que HTML y diccionarios siguen sincronizados (61 claves a día de hoy):
 
@@ -104,6 +108,20 @@ activo del nav, revelado al hacer scroll y contacto. Dos decisiones no obvias:
 El enlace activo del nav se calcula en el handler de scroll (la última sección cuyo inicio pasó
 el 35 % de la ventana), no con `IntersectionObserver`: con un observador varios enlaces podían
 quedar activos a la vez.
+
+### SEO
+
+El sitio compite por el nombre propio «Gabriel Navarro Bazay», así que hay cuatro sitios con
+**URLs absolutas escritas a mano** que deben moverse juntos: el bloque `<link>` de canonical y
+hreflang del `<head>`, las etiquetas Open Graph, `sitemap.xml` y `robots.txt`. Si cambia el nombre
+del repositorio o se añade un dominio propio, hay que actualizar los cuatro o Google recibirá
+señales contradictorias.
+
+El `<head>` lleva dos bloques JSON-LD: un `Person` con `@id` estable (nombre completo,
+`alternateName` con las variantes, formación, certificaciones y `sameAs` a LinkedIn y GitHub) y un
+`WebSite` que lo referencia por ese `@id`. El nombre completo debe aparecer también en el `<title>`,
+el `<h1>`, la meta description y el primer párrafo del hero, en los tres idiomas — si tocas uno,
+tócalos todos.
 
 ## Restricciones que hay que respetar
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gnbazay.github.io/gabriel-navarro-bazay/sitemap.xml
