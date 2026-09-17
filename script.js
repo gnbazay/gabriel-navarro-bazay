@@ -12,7 +12,7 @@
   var I18N = {
     es: {
       "meta.title": "Gabriel Navarro Bazay — Leader Técnico y Solution Manager",
-      "meta.description": "Gabriel Navarro Bazay, Leader Técnico y Scrum Master con más de 20 años de experiencia liderando equipos, definiendo arquitecturas de software y gestionando soluciones cloud. Actualmente Solution Manager entre Francia e Italia.",
+      "meta.description": "Gabriel Navarro Bazay, Leader Técnico y Scrum Master con más de 20 años de experiencia liderando equipos, definiendo arquitecturas de software y gestionando soluciones cloud. Último puesto: Solution Manager, coordinando equipos entre Francia e Italia.",
 
       "a11y.skip": "Saltar al contenido",
       "a11y.navLabel": "Principal",
@@ -25,10 +25,9 @@
       "nav.education": "Formación",
       "nav.contact": "Contacto",
 
-      "hero.status": "Disponible",
       "hero.role": "Leader Técnico · Solution Manager",
-      "hero.statement": "Lidero equipos que construyen el futuro, con arquitecturas sólidas y personas que crecen.",
-      "hero.summary": "Soy Gabriel Navarro Bazay, Leader Técnico y Scrum Master con amplia experiencia liderando equipos técnicos, definiendo arquitecturas de software y gestionando soluciones cloud. Actualmente Solution Manager, coordinando equipos en Francia e Italia, con un fuerte enfoque en calidad, mejora continua y desarrollo de las personas.",
+      "hero.statement": "Arquitecturas sólidas, equipos que crecen y software que se sostiene en el tiempo.",
+      "hero.summary": "Soy Gabriel Navarro Bazay, Leader Técnico y Scrum Master con más de veinte años en el desarrollo de software. He liderado equipos técnicos, definido arquitecturas y gestionado soluciones cloud; en mi último puesto, como Solution Manager, coordiné equipos entre Francia e Italia. Trabajo con foco en la calidad, la mejora continua y el desarrollo de las personas.",
       "hero.ctaContact": "Contactar",
       "hero.ctaCv": "Descargar CV",
       "hero.ctaCvNote": "PDF · FR",
@@ -86,7 +85,7 @@
 
     en: {
       "meta.title": "Gabriel Navarro Bazay — Technical Lead & Solution Manager",
-      "meta.description": "Gabriel Navarro Bazay, Technical Lead and Scrum Master with over 20 years of experience leading teams, defining software architectures and managing cloud solutions. Currently Solution Manager across France and Italy.",
+      "meta.description": "Gabriel Navarro Bazay, Technical Lead and Scrum Master with over 20 years of experience leading teams, defining software architectures and managing cloud solutions. Most recently Solution Manager, coordinating teams across France and Italy.",
 
       "a11y.skip": "Skip to content",
       "a11y.navLabel": "Main",
@@ -99,10 +98,9 @@
       "nav.education": "Education",
       "nav.contact": "Contact",
 
-      "hero.status": "Available",
       "hero.role": "Technical Lead · Solution Manager",
-      "hero.statement": "I lead teams that build the future, with solid architectures and people who grow.",
-      "hero.summary": "I am Gabriel Navarro Bazay, a Technical Lead and Scrum Master with extensive experience leading technical teams, defining software architectures and managing cloud solutions. Currently Solution Manager, coordinating teams in France and Italy, with a strong focus on quality, continuous improvement and people development.",
+      "hero.statement": "Solid architectures, teams that grow and software that lasts.",
+      "hero.summary": "I am Gabriel Navarro Bazay, a Technical Lead and Scrum Master with over twenty years in software development. I have led technical teams, defined architectures and managed cloud solutions; in my most recent role, as Solution Manager, I coordinated teams across France and Italy. I work with a strong focus on quality, continuous improvement and people development.",
       "hero.ctaContact": "Get in touch",
       "hero.ctaCv": "Download CV",
       "hero.ctaCvNote": "PDF · FR",
@@ -160,7 +158,7 @@
 
     fr: {
       "meta.title": "Gabriel Navarro Bazay — Leader Technique & Solution Manager",
-      "meta.description": "Gabriel Navarro Bazay, Leader Technique et Scrum Master avec plus de 20 ans d'expérience dans l'encadrement d'équipes, la définition d'architectures logicielles et la gestion de solutions cloud. Actuellement Solution Manager entre la France et l'Italie.",
+      "meta.description": "Gabriel Navarro Bazay, Leader Technique et Scrum Master avec plus de 20 ans d'expérience dans l'encadrement d'équipes, la définition d'architectures logicielles et la gestion de solutions cloud. Dernier poste : Solution Manager, coordination d'équipes entre la France et l'Italie.",
 
       "a11y.skip": "Aller au contenu",
       "a11y.navLabel": "Principal",
@@ -173,10 +171,9 @@
       "nav.education": "Formation",
       "nav.contact": "Contact",
 
-      "hero.status": "Disponible",
       "hero.role": "Leader Technique · Solution Manager",
-      "hero.statement": "Je dirige des équipes qui bâtissent l'avenir, avec des architectures solides et des personnes qui progressent.",
-      "hero.summary": "Je suis Gabriel Navarro Bazay, Leader Technique et Scrum Master avec une solide expérience dans l'encadrement d'équipes techniques, la définition d'architectures logicielles et la gestion de solutions cloud. Actuellement Solution Manager, je coordonne des équipes en France et en Italie, avec un fort accent sur la qualité, l'amélioration continue et le développement des personnes.",
+      "hero.statement": "Des architectures solides, des équipes qui progressent et des logiciels qui durent.",
+      "hero.summary": "Je suis Gabriel Navarro Bazay, Leader Technique et Scrum Master avec plus de vingt ans dans le développement logiciel. J'ai dirigé des équipes techniques, défini des architectures et géré des solutions cloud ; dans mon dernier poste, en tant que Solution Manager, j'ai coordonné des équipes entre la France et l'Italie. Je travaille avec un fort accent sur la qualité, l'amélioration continue et le développement des personnes.",
       "hero.ctaContact": "Me contacter",
       "hero.ctaCv": "Télécharger le CV",
       "hero.ctaCvNote": "PDF · FR",
