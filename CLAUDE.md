@@ -14,7 +14,7 @@ no introduzcas npm, bundlers, preprocesadores ni librerías de terceros sin que 
 ## Flujo de trabajo: rama por cambio
 
 **Nunca trabajes directamente sobre `main`.** Es la regla más importante de este repositorio y no
-admite excepciones. Toda modificación pasa por tres tiempos, en este orden:
+admite excepciones. Toda modificación pasa por cuatro tiempos, en este orden:
 
 1. **Rama.** El cambio arranca con una rama creada a partir de `main` actualizado, y se commitea
    allí.
@@ -22,6 +22,8 @@ admite excepciones. Toda modificación pasa por tres tiempos, en este orden:
    propia rama en GitHub— para que sea él quien compruebe el resultado.
 3. **Orden explícita de fusionar.** El merge a `main` lo decide y lo ordena el usuario, no tú.
    Solo cuando lo pide se ejecuta la fusión, y con ella se publica.
+4. **Borrado de la rama.** Una vez fusionada, la rama se borra —la local y la remota, si llegó a
+   subirse—. Las ramas son efímeras: la lista de ramas debe reflejar solo el trabajo vivo.
 
 ```bash
 git checkout main && git pull
@@ -29,19 +31,23 @@ git checkout -b <nombre-del-cambio>
 # … editar, commitear, y ofrecerle una vista previa (servidor local o la rama en GitHub)
 # … esperar a que ÉL ordene fusionar; solo entonces:
 git checkout main && git merge --no-ff <nombre-del-cambio> && git push origin main
+git branch -d <nombre-del-cambio>
+git push origin --delete <nombre-del-cambio>   # solo si la rama se había subido
 ```
 
 El motivo es que `main` está conectado a GitHub Pages en modo «deploy from a branch»: cualquier
 push a esa rama republica la web personal al instante, sin margen de revisión. Fusionar sin su
 orden equivale a publicar en producción algo que él no ha visto.
 
-Tres matices que se olvidan con facilidad:
+Cuatro matices que se olvidan con facilidad:
 
 - **El silencio no es aprobación.** Mientras no lo diga, el trabajo se queda en la rama.
 - **Aprobar un plan no es aprobar el merge.** Son dos permisos distintos; el segundo se pide
   siempre por separado, después de que vea el resultado.
 - **La trivialidad no exime.** También se aplica a erratas, cambios de una línea y a la
   documentación del propio repositorio, este archivo incluido.
+- **El borrado es parte del merge**, no un paso opcional posterior: se hace en la misma
+  operación, sin esperar a que él lo recuerde.
 
 ## Comandos
 
