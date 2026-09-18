@@ -94,7 +94,7 @@
       "contact.phoneShow": "Mostrar número",
       "contact.location": "Ubicación",
 
-      "footer.built": "Hecho con HTML, CSS y JavaScript"
+      "footer.built": ""
     },
 
     en: {
@@ -181,7 +181,7 @@
       "contact.phoneShow": "Show number",
       "contact.location": "Location",
 
-      "footer.built": "Built with HTML, CSS and JavaScript"
+      "footer.built": ""
     },
 
     fr: {
@@ -268,7 +268,7 @@
       "contact.phoneShow": "Afficher le numéro",
       "contact.location": "Localisation",
 
-      "footer.built": "Réalisé en HTML, CSS et JavaScript"
+      "footer.built": ""
     }
   };
 
